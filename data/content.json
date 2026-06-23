@@ -1,0 +1,375 @@
+{
+  "_comment": "FLUXhub — Résidence La Plage, Olmeto. Generated from livret PDF v1.",
+  "meta": {
+    "version": "1.0",
+    "fluxhub": true,
+    "lastUpdated": "2026-06-16T00:00:00Z"
+  },
+  "branding": {
+    "name": "Nom de l'établissement",
+    "tagline": "Ville · Région",
+    "heroTitle": "Bienvenue\ndans votre séjour",
+    "logoUrl": "/data/logo.png",
+    "heroImageUrl": "/data/hero.jpg",
+    "colors": {
+      "primary": "#2C5F8A",
+      "secondary": ""
+    }
+  },
+  "establishment": {
+    "address": "1 rue de l'Hôtel, 75000 Paris",
+    "phones": [
+      {
+        "id": "ph1",
+        "label": "Réception",
+        "value": "+33 1 00 00 00 00",
+        "visible": true
+      }
+    ],
+    "emails": [
+      {
+        "id": "em1",
+        "label": "Contact",
+        "value": "contact@hotel.com",
+        "visible": true
+      }
+    ],
+    "website": "https://www.hotel.com",
+    "websiteVisible": true,
+    "checkin": "15:00",
+    "checkout": "11:00",
+    "checkinVisible": true,
+    "checkoutVisible": true,
+    "wifiNetwork": "",
+    "wifiPassword": "",
+    "wifiVisible": false,
+    "rulesTitle": "Règlement intérieur",
+    "rulesContent": "",
+    "rulesVisible": false,
+    "services": [
+      {
+        "id": "s1",
+        "icon": "ti-droplet",
+        "label": "Piscine",
+        "visible": true
+      },
+      {
+        "id": "s2",
+        "icon": "ti-wifi",
+        "label": "Wi-Fi gratuit",
+        "visible": true
+      },
+      {
+        "id": "s3",
+        "icon": "ti-car",
+        "label": "Parking",
+        "visible": true
+      }
+    ],
+    "schedules": [
+      {
+        "id": "sch1",
+        "label": "Petit-déjeuner",
+        "value": "7h30 – 10h30",
+        "visible": true
+      },
+      {
+        "id": "sch2",
+        "label": "Piscine",
+        "value": "9h00 – 20h00",
+        "visible": true
+      }
+    ]
+  },
+  "sections": [
+    {
+      "id": "alentours",
+      "navLabel": "Alentours",
+      "navIcon": "ti-map-pin",
+      "visible": true,
+      "inMenu": true,
+      "order": 1,
+      "categories": [
+        {
+          "id": "cat_restaurants",
+          "name": "Restaurants",
+          "icon": "ti-fork",
+          "coverImageUrl": "",
+          "visible": true,
+          "order": 1,
+          "items": [
+            {
+              "id": "item_resto1",
+              "name": "Le Restaurant",
+              "subtitle": "Cuisine locale",
+              "description": "Un restaurant à deux pas proposant une cuisine du terroir.",
+              "phone": "+33 1 00 00 00 01",
+              "phoneVisible": true,
+              "email": "",
+              "emailVisible": false,
+              "website": "https://www.lerestaurant.com",
+              "websiteVisible": true,
+              "mapUrl": "https://maps.google.com/?q=Le+Restaurant+Paris",
+              "mapVisible": true,
+              "imageUrl": "",
+              "visible": true,
+              "order": 1
+            }
+          ]
+        },
+        {
+          "id": "cat_activites",
+          "name": "Activités",
+          "icon": "ti-ticket",
+          "coverImageUrl": "",
+          "visible": true,
+          "order": 2,
+          "items": [
+            {
+              "id": "item_activite1",
+              "name": "Activité exemple",
+              "subtitle": "Ville",
+              "description": "Description courte de l'activité.",
+              "phone": "",
+              "phoneVisible": false,
+              "email": "",
+              "emailVisible": false,
+              "website": "",
+              "websiteVisible": false,
+              "mapUrl": "",
+              "mapVisible": false,
+              "imageUrl": "",
+              "visible": true,
+              "order": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "transport",
+      "navLabel": "Transport",
+      "navIcon": "ti-bus",
+      "visible": true,
+      "inMenu": true,
+      "order": 2,
+      "categories": [
+        {
+          "id": "cat_taxi",
+          "name": "Taxis & VTC",
+          "icon": "ti-car",
+          "coverImageUrl": "",
+          "visible": true,
+          "order": 1,
+          "items": [
+            {
+              "id": "item_taxi1",
+              "name": "Taxi exemple",
+              "subtitle": "Disponible 24h/24",
+              "description": "",
+              "phone": "+33 1 00 00 00 02",
+              "phoneVisible": true,
+              "email": "",
+              "emailVisible": false,
+              "website": "",
+              "websiteVisible": false,
+              "mapUrl": "",
+              "mapVisible": false,
+              "imageUrl": "",
+              "visible": true,
+              "order": 1
+            }
+          ]
+        },
+        {
+          "id": "cat_gare",
+          "name": "Gares & aéroports",
+          "icon": "ti-plane",
+          "coverImageUrl": "",
+          "visible": true,
+          "order": 2,
+          "items": [
+            {
+              "id": "item_gare1",
+              "name": "Gare centrale",
+              "subtitle": "15 min en taxi",
+              "description": "",
+              "phone": "",
+              "phoneVisible": false,
+              "email": "",
+              "emailVisible": false,
+              "website": "",
+              "websiteVisible": false,
+              "mapUrl": "https://maps.google.com/?q=Gare+centrale",
+              "mapVisible": true,
+              "imageUrl": "",
+              "visible": true,
+              "order": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contact",
+      "navLabel": "Contact",
+      "navIcon": "ti-phone",
+      "visible": true,
+      "inMenu": true,
+      "order": 3,
+      "categories": [
+        {
+          "id": "cat_urgences",
+          "name": "Urgences",
+          "icon": "ti-heart-rate-monitor",
+          "coverImageUrl": "",
+          "visible": true,
+          "order": 1,
+          "items": [
+            {
+              "id": "item_samu",
+              "name": "SAMU",
+              "subtitle": "",
+              "description": "",
+              "phone": "15",
+              "phoneVisible": true,
+              "email": "",
+              "emailVisible": false,
+              "website": "",
+              "websiteVisible": false,
+              "mapUrl": "",
+              "mapVisible": false,
+              "imageUrl": "",
+              "visible": true,
+              "order": 1
+            },
+            {
+              "id": "item_pompiers",
+              "name": "Pompiers",
+              "subtitle": "",
+              "description": "",
+              "phone": "18",
+              "phoneVisible": true,
+              "email": "",
+              "emailVisible": false,
+              "website": "",
+              "websiteVisible": false,
+              "mapUrl": "",
+              "mapVisible": false,
+              "imageUrl": "",
+              "visible": true,
+              "order": 2
+            },
+            {
+              "id": "item_urgences",
+              "name": "Urgences européennes",
+              "subtitle": "",
+              "description": "",
+              "phone": "112",
+              "phoneVisible": true,
+              "email": "",
+              "emailVisible": false,
+              "website": "",
+              "websiteVisible": false,
+              "mapUrl": "",
+              "mapVisible": false,
+              "imageUrl": "",
+              "visible": true,
+              "order": 3
+            },
+            {
+              "id": "item_police",
+              "name": "Police / Gendarmerie",
+              "subtitle": "",
+              "description": "",
+              "phone": "17",
+              "phoneVisible": true,
+              "email": "",
+              "emailVisible": false,
+              "website": "",
+              "websiteVisible": false,
+              "mapUrl": "",
+              "mapVisible": false,
+              "imageUrl": "",
+              "visible": true,
+              "order": 4
+            }
+          ]
+        },
+        {
+          "id": "cat_sante",
+          "name": "Santé",
+          "icon": "ti-building-hospital",
+          "coverImageUrl": "",
+          "visible": true,
+          "order": 2,
+          "items": [
+            {
+              "id": "item_hopital1",
+              "name": "Hôpital le plus proche",
+              "subtitle": "Adresse de l'hôpital",
+              "description": "",
+              "phone": "",
+              "phoneVisible": false,
+              "email": "",
+              "emailVisible": false,
+              "website": "",
+              "websiteVisible": false,
+              "mapUrl": "https://maps.google.com/?q=Hôpital",
+              "mapVisible": true,
+              "imageUrl": "",
+              "visible": true,
+              "order": 1
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "selection": {
+    "title": "Notre sélection",
+    "visible": true,
+    "items": [
+      {
+        "sectionId": "alentours",
+        "categoryId": "cat_restaurants",
+        "itemId": "item_resto1"
+      },
+      {
+        "sectionId": "alentours",
+        "categoryId": "cat_activites",
+        "itemId": "item_activite1"
+      },
+      {
+        "sectionId": "transport",
+        "categoryId": "cat_taxi",
+        "itemId": "item_taxi1"
+      },
+      {
+        "sectionId": "transport",
+        "categoryId": "cat_gare",
+        "itemId": "item_gare1"
+      },
+      {
+        "sectionId": "contact",
+        "categoryId": "cat_urgences",
+        "itemId": "item_samu"
+      },
+      {
+        "sectionId": "contact",
+        "categoryId": "cat_urgences",
+        "itemId": "item_pompiers"
+      },
+      {
+        "sectionId": "contact",
+        "categoryId": "cat_urgences",
+        "itemId": "item_urgences"
+      },
+      {
+        "sectionId": "contact",
+        "categoryId": "cat_sante",
+        "itemId": "item_hopital1"
+      }
+    ]
+  }
+}
