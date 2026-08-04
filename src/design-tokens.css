@@ -1,0 +1,357 @@
+/* ============================================
+   FLUXHUB — Design Tokens v2.0
+   Source of truth. Ne jamais hardcoder
+   une valeur qui existe ici.
+   ============================================ */
+
+/* --- Google Fonts : 3 familles --- */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Open+Sans:wght@300;400;600;700&display=swap');
+
+/* --- Reset minimal --- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { -webkit-tap-highlight-color: transparent; }
+body { -webkit-font-smoothing: antialiased; }
+
+/* ============================================
+   PALETTE FRONT — fonds chauds, encre douce
+   ============================================ */
+:root {
+  --fh-white:        #FFFFFF;
+  --fh-sand-50:      #F7F5F2;
+  --fh-sand-100:     #F0ECE5;
+  --fh-sand-200:     #ECE7DF;   /* hairline */
+  --fh-sand-300:     #DCD6CC;
+  --fh-gray-400:     #A89F93;   /* labels / eyebrows / nav inactif */
+  --fh-gray-500:     #8A8178;
+  --fh-gray-700:     #6B6359;
+  --fh-ink:          #2A2521;   /* encre chaude */
+  --fh-bg-alt:       #EDE9E3;   /* fond alterné */
+
+  /* Accent fixe */
+  --fh-accent:       #2C5F8A;
+  --fh-accent-light: #E8F0F7;
+
+  /* Urgence */
+  --fh-danger:       #C0392B;
+  --fh-danger-light: #FDECEA;
+  --fh-danger-bg:    #FBEBE9;
+}
+
+/* ============================================
+   PALETTE BACK — identité FLUX (fixe, jamais
+   impactée par la charte du client)
+   ============================================ */
+:root {
+  --flux-ink:        #16150F;
+  --flux-ink-soft:   #57544C;
+  --flux-ink-mute:   #9C988D;
+  --flux-canvas:     #FCFBF9;
+  --flux-line:       #ECEAE3;
+
+  --flux-mint:       #2F8B61;
+  --flux-mint-bg:    #E6F2EB;
+  --flux-lav:        #6A5AD0;
+  --flux-lav-bg:     #EDEAFB;
+  --flux-amber:      #B07D1A;
+  --flux-amber-bg:   #FAF0D8;
+  --flux-danger:     #C0392B;
+  --flux-danger-bg:  #FBEBE9;
+}
+
+/* ============================================
+   COULEURS CLIENT (override par établissement)
+   ============================================ */
+:root {
+  --client-primary:        #1B3A5C;
+  --client-primary-dark:   #0F2340;
+  --client-primary-light:  #E8EEF4;
+  --client-secondary:      #C9A96E;
+  --client-secondary-light:#F7F2EA;
+  --client-tint: color-mix(in oklch, var(--client-primary) 10%, #fff);
+}
+
+/* ============================================
+   TYPOGRAPHIE
+   ============================================ */
+:root {
+  --font-display:      'Cormorant Garamond', Georgia, serif;  /* FRONT */
+  --flux-font-display: 'Playfair Display', Georgia, serif;    /* BACK  */
+  --font-body:         'Open Sans', system-ui, sans-serif;
+
+  --text-xs:   9px;
+  --text-sm:   11px;
+  --text-base: 13px;
+  --text-md:   15px;
+  --text-lg:   18px;
+  --text-xl:   24px;
+  --text-2xl:  30px;
+  --text-3xl:  38px;
+
+  --weight-light:   400;
+  --weight-regular: 400;
+  --weight-medium:  600;
+
+  --tracking-caps: 0.16em;
+  --tracking-wide: 0.06em;
+}
+
+/* ============================================
+   ESPACEMENTS
+   ============================================ */
+:root {
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  20px;
+  --space-6:  24px;
+  --space-8:  32px;
+  --space-10: 40px;
+  --space-12: 48px;
+}
+
+/* ============================================
+   RAYONS & OMBRES
+   ============================================ */
+:root {
+  --radius-sm:   10px;
+  --radius-md:   13px;
+  --radius-lg:   18px;
+  --radius-xl:   20px;
+  --radius-full: 999px;
+
+  --shadow-card:       none;
+  --shadow-card-hover: 0 14px 30px -20px rgba(60,48,32,.28);
+  --shadow-float:      0 22px 40px -26px rgba(60,48,32,.35);
+  --shadow-nav:        0 14px 30px -18px rgba(60,48,32,.40);
+}
+
+/* ============================================
+   LAYOUT
+   ============================================ */
+:root {
+  --nav-height:    64px;
+  --header-height: 56px;
+  --hero-height:   58dvh;
+  --max-width:     480px;
+  --side-padding:  var(--space-4);
+  --ease:          cubic-bezier(.22,.61,.36,1);
+}
+
+/* ============================================
+   TRANSITIONS
+   ============================================ */
+:root {
+  --transition-fast:   120ms ease;
+  --transition-base:   200ms ease;
+  --transition-slow:   350ms ease;
+}
+
+/* ============================================
+   CLASSES UTILITAIRES
+   ============================================ */
+
+.fh-app {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  font-weight: var(--weight-regular);
+  color: var(--fh-ink);
+  background: var(--fh-sand-50);
+  min-height: 100dvh;
+  max-width: 100%;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Serif display — FRONT */
+.fh-display {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.02;
+  letter-spacing: -.01em;
+  text-wrap: pretty;
+  color: var(--fh-ink);
+}
+
+/* Eyebrow capslock */
+.fh-eyebrow {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--fh-gray-400);
+}
+
+/* Label capslock */
+.fh-label {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: .20em;
+  text-transform: uppercase;
+  color: var(--fh-gray-400);
+}
+
+/* Séparateur */
+.fh-divider {
+  height: 1px;
+  background: var(--fh-sand-200);
+  border: none;
+}
+
+/* Card */
+.fh-card {
+  background: var(--fh-white);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--client-line);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+}
+
+/* Pill service */
+.fh-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--client-surface);
+  border: 1px solid var(--client-secondary-soft);
+  border-radius: var(--radius-full);
+  padding: 9px 14px;
+  font-size: var(--text-base);
+  color: var(--fh-gray-700);
+  font-weight: 500;
+}
+
+/* Lien */
+.fh-link {
+  color: var(--fh-accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* ============================================
+   FEEDBACK TACTILE & HOVER
+   ============================================ */
+
+/* Tap universel */
+.fh-tap {
+  transition: transform .15s var(--ease), opacity .15s var(--ease),
+              background .15s var(--ease), box-shadow .2s var(--ease);
+  -webkit-tap-highlight-color: transparent;
+}
+.fh-tap:active { transform: scale(.975); opacity: .92; }
+
+/* Desktop hover — fond */
+@media (hover:hover) and (pointer:fine) {
+  .fh-press:hover { background: var(--fh-sand-100); }
+
+  .fh-lift { transition: transform .2s var(--ease), box-shadow .2s var(--ease); }
+  .fh-lift:hover { transform: translateY(-2px); box-shadow: var(--shadow-card-hover); }
+
+  .fh-fade:hover { opacity: .7; }
+
+  .fh-zoom img { transition: transform .45s var(--ease); }
+  .fh-zoom:hover img { transform: scale(1.045); }
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+
+/* Apparition au scroll */
+@keyframes fh-up { from { opacity:0; transform:translateY(14px); } to { opacity:1; transform:none; } }
+.fh-reveal { animation: fh-up .5s var(--ease) both; }
+
+/* Spinner */
+@keyframes fh-spin { to { transform: rotate(360deg); } }
+
+/* Respect reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .fh-reveal { animation: none; opacity: 1; }
+  .fh-tap:active { transform: none; }
+  .fh-lift:hover { transform: none; }
+  .fh-zoom:hover img { transform: none; }
+}
+
+/* Image fade-in */
+.fh-img { opacity: 0; transition: opacity .4s var(--ease); }
+.fh-img.is-loaded { opacity: 1; }
+
+/* View Transitions API */
+::view-transition-old(root),
+::view-transition-new(root) { animation-duration: .28s; }
+
+/* ============================================
+   BOUTONS GLOBAUX
+   ============================================ */
+.fh-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  background: var(--client-primary);
+  color: var(--fh-white);
+  border: none;
+  border-radius: var(--radius-md);
+  padding: var(--space-3) var(--space-5);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  font-weight: 600;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+.fh-btn-primary:active { background: var(--client-primary-dark); }
+
+.fh-btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  background: transparent;
+  color: var(--fh-gray-700);
+  border: 1px solid var(--fh-sand-300);
+  border-radius: var(--radius-md);
+  padding: var(--space-2) var(--space-4);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  cursor: pointer;
+}
+.fh-btn-ghost:active { background: var(--fh-sand-100); }
+
+
+/* ============================================
+   RESPONSIVE — breakpoints
+   ============================================ */
+
+/* Tablette ≥ 768px */
+@media (min-width: 768px) {
+  :root {
+    --side-padding:  28px;
+    --hero-height:   420px;
+    --nav-height:    72px;
+    --header-height: 64px;
+    --max-width:     100%;
+  }
+
+  /* App pleine largeur */
+  .fh-app {
+    max-width: 100%;
+  }
+
+  /* Textes plus grands */
+  .fh-display { letter-spacing: -.02em; }
+}
+
+/* Desktop ≥ 1024px */
+@media (min-width: 1024px) {
+  :root {
+    --side-padding: 48px;
+  }
+}
+
+/* ============================================
+   SCROLLBAR invisible
+   ============================================ */
+::-webkit-scrollbar { display: none; }
+* { scrollbar-width: none; }
