@@ -15,14 +15,6 @@ define('ADMIN_PASSWORD_HASH', ''); // sha256 du mot de passe admin — à rempli
 header('Content-Type: application/json; charset=utf-8');
 header('X-Content-Type-Options: nosniff');
 
-// Refuser les requêtes cross-origin (protection basique)
-$origin = $_SERVER['HTTP_ORIGIN'] ?? $_SERVER['HTTP_HOST'] ?? '';
-$host   = $_SERVER['HTTP_HOST'] ?? '';
-if ($origin && parse_url($origin, PHP_URL_HOST) !== $host) {
-  http_response_code(403);
-  exit(json_encode(['error' => 'Forbidden']));
-}
-
 $action = $_GET['action'] ?? $_POST['action'] ?? '';
 
 // --- PING : test de disponibilité ---
